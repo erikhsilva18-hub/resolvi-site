@@ -29,6 +29,7 @@ Esse é também o contato do encarregado pelo tratamento de dados.</div>
 <tr><td>Nome no cadastro, tipo de conta (cliente ou prestador) e cidade</td><td>Todos</td><td>Identificar você no app e mostrar serviços da sua região.</td></tr>
 <tr><td>Localização do aparelho (só com a sua permissão e só com o app aberto)</td><td>Todos</td><td>Calcular a distância entre cliente e prestador. Para os outros usuários, a localização do prestador aparece só de forma aproximada (cerca de 1 km). Não usamos localização em segundo plano.</td></tr>
 <tr><td>Nome público, áreas de atuação, descrição, raio de atendimento, serviços e preços</td><td>Prestadores</td><td>Montar o perfil público do prestador, visível aos clientes depois da aprovação.</td></tr>
+<tr><td>Foto do documento de identidade (RG, CNH ou CIN) e selfie tirada na hora, com os dados lidos do documento (nome e data de nascimento)</td><td>Prestadores</td><td>Confirmar a identidade de quem oferece serviços e prevenir fraudes. As fotos ficam numa área restrita (só a administração acessa), não aparecem para clientes e são analisadas automaticamente por inteligência artificial (Google Gemini) e, quando há dúvida, pela nossa equipe. O cliente vê apenas o selo “Identidade verificada”.</td></tr>
 <tr><td>Chave Pix</td><td>Prestadores</td><td>Repassar os valores dos serviços. Fica numa área restrita, que só o prestador e a administração acessam.</td></tr>
 <tr><td>Fotos de trabalhos realizados (câmera ou galeria, com a sua permissão)</td><td>Prestadores</td><td>Mostrar o portfólio. Toda foto passa por moderação antes de aparecer para os clientes.</td></tr>
 <tr><td>Pedidos: serviço, data e horário, endereço do atendimento, observações, valores e situação</td><td>Clientes e prestadores do pedido</td><td>Agendar e realizar o serviço, cobrar, repassar o valor e resolver problemas. O endereço só aparece para o prestador do pedido.</td></tr>
@@ -36,8 +37,9 @@ Esse é também o contato do encarregado pelo tratamento de dados.</div>
 <tr><td>Relatos de problema: descrição, passos, print da tela (se você anexar), telas visitadas e modelo do aparelho</td><td>Quem envia</td><td>Investigar e corrigir erros e responder ao seu relato.</td></tr>
 <tr><td>Dados de pagamento</td><td>Clientes</td><td>Cobrar o serviço. Os dados do cartão e do Pix são digitados no ambiente da empresa de pagamentos e não ficam guardados no Resolvi.</td></tr>
 </table>
-<p>Não coletamos dados sensíveis (como saúde, religião ou biometria). Não vendemos os seus dados e não os usamos
-para publicidade de terceiros.</p>
+<p>O único dado sensível que tratamos é a imagem do rosto do prestador (dado biométrico), usada só para conferir a
+identidade, com o consentimento dado na tela de verificação (art. 11, I, da LGPD). Não coletamos outros dados sensíveis
+(como saúde ou religião). Não vendemos os seus dados e não os usamos para publicidade de terceiros.</p>
 
 <h2>3. Bases legais (art. 7º da LGPD)</h2>
 <ul>
@@ -52,6 +54,7 @@ para publicidade de terceiros.</p>
 <li><strong>Entre usuários:</strong> o cliente vê o perfil público do prestador; o prestador vê o nome do cliente e os dados do pedido que recebeu.</li>
 <li><strong>Supabase:</strong> hospedagem do banco de dados, das fotos e do login. Os servidores ficam em São Paulo (Brasil).</li>
 <li><strong>Google e Apple:</strong> quando você escolhe entrar com essas contas.</li>
+<li><strong>Google (Gemini):</strong> recebe a foto do documento e a selfie do prestador para a conferência automática de identidade. Nesta fase usamos o serviço na modalidade gratuita, em que o Google pode usar o conteúdo enviado para melhorar os próprios produtos, conforme os termos dele.</li>
 <li><strong>Empresa de pagamentos:</strong> processa a cobrança, retém o valor até a confirmação do serviço e faz a divisão entre o prestador e o Resolvi.</li>
 <li><strong>Autoridades:</strong> quando houver ordem judicial ou obrigação legal.</li>
 </ul>
@@ -60,6 +63,7 @@ para publicidade de terceiros.</p>
 <h2>5. Por quanto tempo guardamos</h2>
 <ul>
 <li>Dados da conta e do perfil: enquanto a conta existir.</li>
+<li>Fotos da verificação de identidade: enquanto a conta de prestador existir, para prevenção de fraudes; são apagadas junto com a conta.</li>
 <li>Pedidos e registros financeiros: pelo prazo exigido pela legislação fiscal e para defesa em eventuais disputas (até 5 anos).</li>
 <li>Registros de acesso: 6 meses, como exige o Marco Civil da Internet.</li>
 <li>Fotos recusadas na moderação e relatos de problema já resolvidos podem ser apagados antes disso.</li>
